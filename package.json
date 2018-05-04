@@ -1,6 +1,6 @@
 {
   "name": "egg-http-parameter",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "eggPlugin": {
     "name": "httpParameter"
@@ -40,19 +40,21 @@
   "files": [
     "app.js",
     "agent.js",
-    "config"
+    "config",
+    "lib",
+    "app"
   ],
   "ci": {
     "version": "6, 8"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-http-parameter.git"
+    "url": "git+https://github.com/holyselina/egg-http-parameter.git"
   },
   "bugs": {
-    "url": "https://github.com/eggjs/egg/issues"
+    "url": "https://github.com/holyselina/egg-http-parameter/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-http-parameter#readme",
+  "homepage": "https://github.com/holyselina/egg-http-parameter#readme",
   "author": "",
   "license": "MIT"
 }
