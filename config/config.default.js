@@ -6,5 +6,7 @@
  * @property {String} SOME_KEY - some description
  */
 exports.httpParameter = {
-
+    errorStatus:400,
+    errorMessage:'Validation Failed',
+    errorCode:'invalid_param'
 }
