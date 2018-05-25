@@ -1,6 +1,6 @@
 {
   "name": "egg-http-parameter",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "",
   "eggPlugin": {
     "name": "httpParameter"
@@ -11,7 +11,7 @@
     "egg-plugin"
   ],
   "dependencies": {
-    "moment": "^2.18.1"
+    "moment": "^2.22.1"
   },
   "devDependencies": {
     "autod": "^2.8.0",
@@ -38,11 +38,10 @@
     "autod": "autod"
   },
   "files": [
-    "app.js",
-    "agent.js",
+    "app",
     "config",
-    "lib",
-    "app"
+    "app.js",
+    "lib"
   ],
   "ci": {
     "version": "6, 8"
