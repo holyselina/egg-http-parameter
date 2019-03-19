@@ -3,7 +3,7 @@
 const request = require('supertest');
 const mm = require('egg-mock');
 
-describe('test/http-parameter.test.js', () => {
+describe.skip('test/http-parameter.test.js', () => {
   let app;
   before(() => {
     app = mm.app({
