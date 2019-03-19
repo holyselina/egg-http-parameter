@@ -18,7 +18,7 @@ describe.skip('test/http-parameter.test.js', () => {
   it('should GET /', () => {
     return request(app.callback())
       .get('/')
-      .expect('hi, httpParameter')
-      .expect(200);
+      .set('Accept', 'application/json')
+      .expect(400);
   });
 });

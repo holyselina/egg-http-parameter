@@ -1,5 +1,5 @@
 'use strict';
-const Validator = require('../lib/validator');
+const Validator = require('..');
 const assert = require('assert');
 describe('test/validator.test.js', () => {
   const v = new Validator();
@@ -144,4 +144,28 @@ describe('test/validator.test.js', () => {
 
   });
 
+
+  it('customer', () => {
+    class Cus extends Validator.Base {
+      static get type() {
+        return 'tjay';
+      }
+      check(value) {
+        if (value !== 'tjay') {
+          return 'error';
+        }
+      }
+      conver() {
+        return 'tjay';
+      }
+    }
+    v.addType(Cus);
+
+    const obj = { name: '{"cc":"fff"}' };
+    let errors = v.validate({ name: 'tjay' }, obj);
+    assert(errors === undefined);
+    obj.name = 'dasdasdas';
+    errors = v.validate({ name: 'tjay' }, obj, false);
+    assert(errors.length === 1);
+  });
 });
