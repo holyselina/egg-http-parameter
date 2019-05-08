@@ -11,6 +11,13 @@ describe('test/validator.test.js', () => {
     assert(errors[0] === 'I am error');
   });
 
+  it('default', () => {
+    const obj = {};
+    const errors = v.validate({ name: { type: 'bool', default: false } }, obj);
+    assert(errors === undefined);
+    assert(obj.name === false);
+  });
+
   it('array', () => {
     const obj = { name: 'aaaa,bbbb' };
     let errors = v.validate({ name: { type: 'array' } }, obj);
