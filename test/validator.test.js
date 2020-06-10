@@ -65,6 +65,11 @@ describe('test/validator.test.js', () => {
     const obj2 = { name: 'xxxxxxxx' };
     errors = v.validate({ name: { type: 'date' } }, obj2);
     assert(errors.length === 1);
+
+    const obj3 = { name: '2019-03-23' };
+    errors = v.validate({ name: { type: 'date', format: 'YYYY-MM-DD', string: true } }, obj3);
+    assert(errors === undefined);
+    assert(obj3.name === '2019-03-23');
   });
 
   it('enum', () => {
